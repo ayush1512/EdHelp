@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/register.css" />
 </head>
 <body>
     <!-- ******************** Header Starts Here ******************* -->
@@ -29,14 +30,6 @@
                                     <div>
                                         <p>Help a child in need</p>
                                         <strong>Donate Now!</strong>
-                                    </div>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button" class="btn btn-primary" style="background-color: #f78d15;border-radius: 10px;border-color: #f78d15;" onclick="window.location.href='register.html'">
-                                    <div>
-                                        <p>Need help?</p>
-                                        <strong>Register Here!</strong>
                                     </div>
                                 </button>
                             </li>
@@ -108,65 +101,69 @@
             </div>
         </div>
     </header>
-        <!-- ******************** Footer Starts Here ******************* -->  
-        <footer class="container-fluid footer-cont">
-            <div class="container">
-                <div class="footer-top row">
-                    <div class="col-md-4 foot-logo">
-                        <h2>EdHelp</h2>
-                    </div>
-                    <div class="col-md-8 foot-addr">
-                        <p>By students, For students, Of students</p>
-                        <ul>
-                            <li><i class="fas fa-map-marker-alt"></i> Laxmi Nagar, Makronia, Sagar, M.P. </li>
-                            <li><i class="fas fa-mobile-alt"></i> +91 916 96969  </li>
-                            <li><i class="far fa-envelope"></i> support@teamrocket.com </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="foot-botom row">
-                    <div class="col-md-3">
-                        <div class="fotter-coo">
-                            <h5>IMPORTANT LINKS</h5>
-                            <ul>
-                                <li><i class="fas fa-caret-right"></i> ABOUT US</li>
-                                <li><i class="fas fa-caret-right"></i> COMPANY PROFILE</li>
-                                <li><i class="fas fa-caret-right"></i> OUR SERVICES</li>
-                                <li><i class="fas fa-caret-right"></i> CONTACT US</li>
-                                <li><i class="fas fa-caret-right"></i> READ BLOG</li>
-                            </ul>
-                        </div>
-                        
-                    </div>
+
+
+    <div class="cont">
+        <div class="form sign-in">
+          <h2>Sign In</h2>
+          <label>
+            <span>Email Address</span>
+            <input type="email" name="email">
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" name="password">
+          </label>
+          <button class="submit" type="button">Sign In</button>
+         
     
-                    <div class="col-md-5">
-                        <div class="fotter-coo">
-                            <h5>PHOTO GALLERY</h5>
-                            <div class="gallery-row row">
-                                <div class="col-md-4 col-6 gall-col">
-                                    <img src="assets/images/gallery/g1.jpg" alt="">
-                                </div>
-                                <div class="col-md-4 col-6 gall-col">
-                                    <img src="assets/images/gallery/g2.jpg" alt="">
-                                </div>
-                                <div class="col-md-4 col-6 gall-col">
-                                    <img src="assets/images/gallery/g3.jpg" alt="">
-                                </div>
-                                <div class="col-md-4 col-6 gall-col">
-                                    <img src="assets/images/gallery/g4.jpg" alt="">
-                                </div>
-                                <div class="col-md-4 col-6 gall-col">
-                                    <img src="assets/images/gallery/g1.jpg" alt="">
-                                </div>
-                                <div class="col-md-4 col-6 gall-col">
-                                    <img src="assets/images/gallery/g2.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+          <div class="social-media">
+            <ul>
+              <li><img src="images/facebook.png"></li>
+              <li><img src="images/twitter.png"></li>
+              <li><img src="images/linkedin.png"></li>
+              <li><img src="images/instagram.png"></li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="sub-cont">
+          <div class="img">
+            <div class="img-text m-up">
+              <h1>New here?</h1>
+              <p>sign up and discover</p>
             </div>
-        </footer>
+            <div class="img-text m-in">
+              <h1>One of us?</h1>
+              <p>just sign in</p>
+            </div>
+            <div class="img-btn">
+              <span class="m-up">Sign Up</span>
+              <span class="m-in">Sign In</span>
+            </div>
+          </div>
+          <div class="form sign-up">
+            <h2>Sign Up</h2>
+            <label>
+              <span>Name</span>
+              <input type="text">
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email">
+            </label>
+            <label>
+              <span>Password</span>
+              <input type="password">
+            </label>
+            <label>
+              <span>Confirm Password</span>
+              <input type="password">
+            </label>
+            <button type="button" class="submit">Sign Up Now</button>
+          </div>
+        </div>
+      </div>
+    <script type="text/javascript" src="assets/js/register.js"></script>
 </body>
 </html>
