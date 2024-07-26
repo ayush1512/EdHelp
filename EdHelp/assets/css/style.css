@@ -316,9 +316,9 @@ header .headwe-nav {
   background: linear-gradient(to bottom, rgba(45, 32, 44, 0.3) 0%, rgba(45, 32, 44, 0.3) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc1b2429', endColorstr='#cc1b2429', GradientType=0);
   position: relative;
-    width: 1600px;
-    height:538.562px;
-    object-fit: cover;
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
 
  }
 
