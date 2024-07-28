@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html style="height:100%">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Donation</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title> Error! </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/fav.svg" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -13,26 +12,6 @@
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <style>
-        #donationBox {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transform: translateY(-10px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        #donationBox:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        #confirmationMessage {
-            margin-top: 20px;
-            color: green;
-        }
-    </style>
 </head>
 
 <body>
@@ -47,6 +26,15 @@
                     </div>
                     <div class="col-md-9 bonto">
                         <ul>
+                            <li>
+                                <button type="button" class="btn btn-primary"
+                                    style="background-color: #ff5722;border-radius: 10px;border-color: #ff5722;">
+                                    <div>
+                                        <p>Help a child in need</p>
+                                        <strong>Donate Now!</strong>
+                                    </div>
+                                </button>
+                            </li>
                             <li>
                                 <button type="button" class="btn btn-primary"
                                     style="background-color: #f78d15;border-radius: 10px;border-color: #f78d15;"
@@ -125,78 +113,17 @@
             </div>
         </div>
     </header>
-
-    <div class="page-nav no-margin row">
-        <div class="container">
-            <div class="row">
-                <h2>Donation Form</h2>
-                <ul>
-                    <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
-                    <li><i class="fas fa-angle-double-right"></i> Donation Form</li>
-                </ul>
+    <div class="container-fluid" style="padding: 5%;">
+        <div class="row">
+            <div class="span6" style="float: none; margin: 0 auto;">
+                <h1 style="margin:0; font-size:150px; line-height:150px; font-weight:bold; color: #ff5722;">404</h1>
+                <div style="text-align: center;">
+                    <h2 style="margin-top:20px;font-size: 30px; color:  #f78d15;">Forbidden</h2>
+                    <p>Page Unavailable!</p>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- Donation Form -->
-    <div style="padding: 5%; background-image: url('/EdHelp/assets/images/slider/devaiah-mallangada-kalaiah-Vtnw7QFlDAw-unsplash.jpg'); background-size: cover; background-position: center;">
-        <div class="container" style="opacity: 0.4;" onmouseover="this.style.opacity = 0.95;" onmouseout="this.style.opacity = 0.8;">
-            <!-- <h1 style="text-align: center; margin-bottom: 3%;">Donate Now</h1> -->
-            <div id="donationBox">
-                <form id="donationForm">
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="anonymous" name="anonymous">
-                        <label class="form-check-label" for="anonymous">Donate Anonymously</label>
-                    </div>
-                    <div id="personalInfo">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="amount">Donation Amount:</label>
-                        <input type="number" class="form-control" id="amount" name="amount" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="paymentMethod">Payment Method:</label>
-                        <select class="form-control" id="paymentMethod" name="paymentMethod" required>
-                            <option value="">Select Payment Method</option>
-                            <option value="creditCard">Credit Card</option>
-                            <option value="paypal">PayPal</option>
-                        </select>
-                    </div>
-                    <div id="creditCardInfo" style="display: none;">
-                        <div class="form-group">
-                            <label for="cardNumber">Card Number:</label>
-                            <input type="text" class="form-control" id="cardNumber" name="cardNumber">
-                        </div>
-                        <div class="form-group">
-                            <label for="expiryDate">Expiry Date:</label>
-                            <input type="text" class="form-control" id="expiryDate" name="expiryDate" placeholder="MM/YY">
-                        </div>
-                        <div class="form-group">
-                            <label for="cvv">CVV:</label>
-                            <input type="text" class="form-control" id="cvv" name="cvv">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
-                    </div>
-                    <div style="text-align: center;">
-                        <button type="submit" class="btn btn-success">Donate</button>
-                    </div>
-                </form>
-                <p id="confirmationMessage"></p>
-            </div>
-        </div>
-    </div>
-    <!-- Footer -->
     <footer class="container-fluid footer-cont">
         <div class="container">
             <div class="foot-botom row">
@@ -250,53 +177,4 @@
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        document.getElementById('paymentMethod').addEventListener('change', function () {
-            const paymentMethod = this.value;
-            const creditCardInfo = document.getElementById('creditCardInfo');
-            if (paymentMethod === 'creditCard') {
-                creditCardInfo.style.display = 'block';
-            } else {
-                creditCardInfo.style.display = 'none';
-            }
-        });
-
-        document.getElementById('anonymous').addEventListener('change', function () {
-            const personalInfo = document.getElementById('personalInfo');
-            if (this.checked) {
-                personalInfo.style.display = 'none';
-                document.getElementById('name').required = false;
-                document.getElementById('email').required = false;
-            } else {
-                personalInfo.style.display = 'block';
-                document.getElementById('name').required = true;
-                document.getElementById('email').required = true;
-            }
-        });
-
-        document.getElementById('donationForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const amount = document.getElementById('amount').value;
-            const paymentMethod = document.getElementById('paymentMethod').value;
-            const message = document.getElementById('message').value;
-            const anonymous = document.getElementById('anonymous').checked;
-
-            if (amount && paymentMethod) {
-                if (anonymous) {
-                    document.getElementById('confirmationMessage').textContent = `Thank you for your anonymous donation of $${amount}!`;
-                } else {
-                    document.getElementById('confirmationMessage').textContent = `Thank you, ${name}, for your donation of $${amount}!`;
-                }
-            } else {
-                document.getElementById('confirmationMessage').textContent = 'Please fill out all required fields.';
-            }
-        });
-    </script>
 </body>
-
-</html>
