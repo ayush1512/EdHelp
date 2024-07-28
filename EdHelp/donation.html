@@ -167,7 +167,7 @@
                         <select class="form-control" id="paymentMethod" name="paymentMethod" required>
                             <option value="">Select Payment Method</option>
                             <option value="creditCard">Credit Card</option>
-                            <option value="paypal">PayPal</option>
+                            <option value="paytm">Paytm</option>
                         </select>
                     </div>
                     <div id="creditCardInfo" style="display: none;">
@@ -182,6 +182,16 @@
                         <div class="form-group">
                             <label for="cvv">CVV:</label>
                             <input type="text" class="form-control" id="cvv" name="cvv">
+                        </div>
+                    </div>
+                    <div id="paytmInfo" style="display: none;">
+                        <div class="form-group">
+                            <label for="upiID">UPI ID:</label>
+                            <input type="text" class="form-control" id="upiID" name="upiID">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNo">Phone Number:</label>
+                            <input type="text" class="form-control" id="phoneNo" name="phoneNo">
                         </div>
                     </div>
                     <div class="form-group">
@@ -261,6 +271,15 @@
                 creditCardInfo.style.display = 'block';
             } else {
                 creditCardInfo.style.display = 'none';
+            }
+        });
+        document.getElementById('paymentMethod').addEventListener('change', function () {
+            const paymentMethod = this.value;
+            const paytmInfo = document.getElementById('paytmInfo');
+            if (paymentMethod === 'paytm') {
+                paytmInfo.style.display = 'block';
+            } else {
+                paytmInfo.style.display = 'none';
             }
         });
 
