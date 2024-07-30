@@ -1,10 +1,8 @@
 *, *:before, *:after{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-weight: 500;
 }
 
-.body{
+/* .body{
   display: flex;
   font-family: 'Nunito', sans-serif;
   border-radius: 50%;
@@ -12,7 +10,7 @@
   align-items: center;
   justify-content: flex-start;
 
-}
+} */
 
 input, button{
   border:none;
@@ -25,7 +23,7 @@ input, button{
   position: relative;
   width: 100%;
   height: 732px;
-  background:#c9def0;
+  background:#fcd7cb;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     border-radius: 15px;
 }
@@ -151,7 +149,7 @@ button{
   width: 100%;
   height: 900px;
   padding-left: 0;
-  background: #fff;
+  background: #ffecd4;
   -webkit-transition: -webkit-transform 1.2s ease-in-out;
   transition: -webkit-transform 1.2s ease-in-out;
   transition: transform 1.2s ease-in-out;
@@ -181,7 +179,6 @@ button{
   top: 0;
   width: 100%;
   height: 700px;
-  background-image: url("../images/register/math.jpg");
   background-size: cover;
   transition: -webkit-transform 1.2s ease-in-out;
   transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
@@ -194,7 +191,7 @@ button{
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.3);
+  background: rgb(216, 216, 216);
 }
 .cont.s-signup .img:before{
   -webkit-transform:translate3d(0, 640px, 0);
@@ -259,7 +256,7 @@ button{
           transform:translate3d(0,640px, 0);
 }
 
-/* Panal button */
+/* Panel button */
 .img-btn{
   overflow: hidden;
   z-index: 2;
@@ -268,6 +265,7 @@ button{
   height: 36px;
   margin: 0 auto;
   background: #FF5722;
+  border: 2px solid #FF5722;
   color: #fff;
   text-transform: uppercase;
   font-size: 15px;
@@ -276,6 +274,11 @@ button{
   border-radius: 30px;
 }
 
+.img-btn:hover{
+  background-color: #f78d15;
+  border:2px solid #f78d15;
+  transition:0.5s;
+}
 
 .img-btn:after{
   content: '';
@@ -285,7 +288,6 @@ button{
   top: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid #FF5722;
   border-radius: 30px;
 }
 
@@ -330,4 +332,8 @@ button{
 .cont.s-signup .sign-up{
   -webkit-transform:translate3d(0, 98px, 0);
           transform:translate3d(0, 98px, 0);
+}
+
+@media only screen and (max-width: 600px){
+  h1{font-size:x-large;}
 }
