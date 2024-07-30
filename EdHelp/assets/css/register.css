@@ -191,8 +191,9 @@ button{
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgb(216, 216, 216);
+  background: #eaeaea;
 }
+
 .cont.s-signup .img:before{
   -webkit-transform:translate3d(0, 640px, 0);
           transform:translate3d(0, 640px, 0);
