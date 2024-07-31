@@ -647,6 +647,9 @@ header .headwe-nav {
 .footer-ablove .btn {
   float: right;
   background-color: #FFF; }
+  div ul li a{
+    color: #FFF;
+  }
 
 /* =================== Copyroght Starts Here =================== */
 .copy {
