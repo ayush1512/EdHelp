@@ -1,23 +1,21 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-	
-	<meta charset="utf-8">
+
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>EdHelp</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/fav.svg">
-	<link href="vendor/fullcalendar/css/fullcalendar.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="vendor/jqvmap/css/jqvmap.min.css">
+    <link rel="stylesheet" href="vendor/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="css/style.css">
-	
+    <link rel="stylesheet" href="css/skin-2.css">
 
 </head>
-
 <body>
-
     <!--*******************
         Preloader start
     ********************-->
@@ -183,10 +181,10 @@
 						</a>
                     </li>
                     <li><a class="ai-icon" href="assignment.html" aria-expanded="false">
-                        <i class="la la-calendar"></i>
-                        <span class="nav-text">Assignment</span>
-                    </a>
-                </li>
+                            <i class="la la-calendar"></i>
+                            <span class="nav-text">Assignment</span>
+                        </a>
+                    </li>
 					<li><a class="ai-icon" href="event-management.html" aria-expanded="false">
 							<i class="la la-calendar"></i>
 							<span class="nav-text">Event Management</span>
@@ -202,9 +200,9 @@
                         </ul>
                     </li>
 					<li><a class="ai-icon" href="all-library.html" aria-expanded="false">
-                        <i class="la la-book"></i>
-                        <span class="nav-text">Library</span>
-                        </a>
+							<i class="la la-book"></i>
+							<span class="nav-text">Library</span>
+						</a>
                     </li>					
                     <li class="nav-label">Apps</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
@@ -222,160 +220,203 @@
         <!--**********************************
             Sidebar end
         ***********************************-->
+    </div>
+    <div class="content-body">
+        <!-- row -->
+        <div class="container-fluid">
 
-		
-		
-        <!--**********************************
-            Content body start
-        ***********************************-->
-        <div class="content-body">
-            <!-- row -->
-            <div class="container-fluid">
-				
-				<div class="row page-titles mx-0">
-                    <div class="col-sm-6 p-md-0">
-                        <div class="welcome-text">
-                            <h4>Events</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Events</a></li>
-                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Events Management</a></li>
-                        </ol>
-                    </div>
+        <div class=" col-xxl-8  col-md-12 ">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Assignment</h5>
                 </div>
-				
-                <div class="row">
-                    <div class="col-lg-9">
-                        <div class="card">
-                            <div class="card-body">
-                                <div id="calendar" class="app-fullcalendar"></div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-intro-title">Calendar</h4>
-
-                                <div class="">
-                                    <div id="external-events" class="my-3">
-                                        <p>Drag and drop your event or click in the calendar</p>
-                                        <div class="external-event" data-class="bg-primary"><i class="fa fa-move"></i>New Theme Release</div>
-                                        <div class="external-event" data-class="bg-success"><i class="fa fa-move"></i>My Event
-                                        </div>
-                                        <div class="external-event" data-class="bg-warning"><i class="fa fa-move"></i>Meet manager</div>
-                                        <div class="external-event" data-class="bg-dark"><i class="fa fa-move"></i>Create New theme</div>
-                                    </div>
-                                    <!-- checkbox -->
-									<div class="checkbox custom-control checkbox-event custom-checkbox pt-3 pb-5">
-										<input type="checkbox" class="custom-control-input" id="drop-remove">
-										<label class="custom-control-label" for="drop-remove">Remove After Drop</label>
-									</div>
-                                    <a href="javascript:void()" data-toggle="modal" data-target="#add-category" class="btn btn-primary btn-event w-100">
-                                        <span class="align-middle"><i class="ti-plus"></i></span> Create New
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- BEGIN MODAL -->
-                    <div class="modal fade none-border" id="event-modal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title"><strong>Add New Event</strong></h4>
-                                </div>
-                                <div class="modal-body"></div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-success save-event waves-effect waves-light">Create
-                                        event</button>
-
-                                    <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modal Add Category -->
-                    <div class="modal fade none-border" id="add-category">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title"><strong>Add a category</strong></h4>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label class="control-label">Category Name</label>
-                                                <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label class="control-label">Choose Category Color</label>
-                                                <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
-                                                    <option value="success">Success</option>
-                                                    <option value="danger">Danger</option>
-                                                    <option value="info">Info</option>
-                                                    <option value="pink">Pink</option>
-                                                    <option value="primary">Primary</option>
-                                                    <option value="warning">Warning</option>
-                                                </select>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover verticle-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Task</th>
+                                    <th scope="col">Professors</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Progress</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Working Design report</td>
+                                    <td>Herman Beck</td>
+                                    <td><span class="badge badge-rounded badge-primary">DONE</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
-                                </div>
-                            </div>
-                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>Project Report Assignments</td>
+                                    <td>Emma Watson</td>
+                                    <td><span class="badge badge-rounded badge-warning">Panding</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>User Interface Design</td>
+                                    <td>Mary Adams</td>
+                                    <td><span class="badge badge-rounded badge-warning">Panding</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>4</th>
+                                    <td>Library book status</td>
+                                    <td>Caleb Richards</td>
+                                    <td><span class="badge badge-rounded badge-danger">Suspended</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>5</th>
+                                    <td>Module Development Task</td>
+                                    <td>June Lane</td>
+                                    <td><span class="badge badge-rounded badge-warning">Panding</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>6</th>
+                                    <td>Working Design report</td>
+                                    <td>Herman Beck</td>
+                                    <td><span class="badge badge-rounded badge-primary">DONE</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>7</th>
+                                    <td>Working Design report</td>
+                                    <td>Herman Beck</td>
+                                    <td><span class="badge badge-rounded badge-primary">DONE</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>8</th>
+                                    <td>Project Report Assignments</td>
+                                    <td>Emma Watson</td>
+                                    <td><span class="badge badge-rounded badge-warning">Panding</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>9</th>
+                                    <td>User Interface Design</td>
+                                    <td>Mary Adams</td>
+                                    <td><span class="badge badge-rounded badge-warning">Panding</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>10</th>
+                                    <td>Library book status</td>
+                                    <td>Caleb Richards</td>
+                                    <td><span class="badge badge-rounded badge-danger">Suspended</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>11</th>
+                                    <td>Module Development Task</td>
+                                    <td>June Lane</td>
+                                    <td><span class="badge badge-rounded badge-warning">Panding</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>12</th>
+                                    <td>Working Design report</td>
+                                    <td>Herman Beck</td>
+                                    <td><span class="badge badge-rounded badge-primary">DONE</span></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 70%;" role="progressbar">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-				
             </div>
         </div>
-        <!--**********************************
-            Content body end
-        ***********************************-->
+        </div>
+        </div>
 
 
-
-		<!--**********************************
-           Support ticket button start
-        ***********************************-->
-
-        <!--**********************************
-           Support ticket button end
-        ***********************************-->
-
-
-    </div>
-    <!--**********************************
-        Main wrapper end
-    ***********************************-->
-
-    <!--**********************************
-        Scripts
-    ***********************************-->
-    <!-- Required vendors -->
-<script src="vendor/global/global.min.js"></script>
+    <script src="vendor/global/global.min.js"></script>
 	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
     <script src="js/custom.min.js"></script>
-	<script src="js/dlabnav-init.js"></script>
-    <!--removeIf(production)-->
+    <script src="js/dlabnav-init.js"></script>
+    
 
 	<!-- Svganimation scripts -->
     <script src="vendor/svganimation/vivus.min.js"></script>
     <script src="vendor/svganimation/svg.animation.js"></script>
-	
-    <script src="vendor/jqueryui/js/jquery-ui.min.js"></script>
-    <script src="vendor/moment/moment.min.js"></script>
-
-    <script src="vendor/fullcalendar/js/fullcalendar.min.js"></script>
-    <script src="js/plugins-init/fullcalendar-init.js"></script>
-	
 </body>
 </html>
