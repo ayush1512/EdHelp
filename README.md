@@ -1,3 +1,5 @@
+https://ayush1512.github.io/EdHelp/
+
 ### EdHelp – Student Fundraising & Study Platform
 
 EdHelp is a responsive front-end web platform built during a one-month internship under IBM SkillBuild CSRBOX. 
